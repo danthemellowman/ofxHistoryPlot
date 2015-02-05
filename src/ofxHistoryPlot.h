@@ -14,7 +14,7 @@
 #include <limits>
 
 #define DEFAULT_WIDTH	160.0f
-#define DEFAULT_HEIGHT	120.0f
+#define DEFAULT_HEIGHT	100.0f
 
 class ofxHistoryPlot{
 
@@ -55,13 +55,13 @@ class ofxHistoryPlot{
 		void setShowSmoothedCurve(bool show){showSmoothedPlot = show;}
 		void setSmoothFilter(float filter){smoothFactor = filter;};
 		vector<float> getValues(){ return values; }
-
+		string			varName;
 	private:
 
 		void refillGridMesh(float x, float y , float w, float h);
 		void refillPlotMesh(ofVboMesh& mesh, vector<float> & vals, float x, float y , float w, float h);
 
-		string			varName;
+
 		float *			valf;
 	
 		vector<float>	values;
